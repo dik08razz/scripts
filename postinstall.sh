@@ -39,7 +39,8 @@ echo "Step 5: Setup Flathub"
 echo ""
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
+    flatpak install telegram flatseal pupgui -y
+    
 echo ""
 echo "Step 6: Remove apps"
 echo ""
