@@ -54,3 +54,5 @@ echo ""
 
 echo ""
 echo "Finish"
+
+konsole -e neofetch && steam 
