@@ -51,9 +51,8 @@ echo ""
 
 echo ""
 
+    clear
     neofetch
 
 echo ""
-echo "Finish"
-
-konsole -e neofetch && steam 
+echo "Finish =)"
