@@ -39,7 +39,7 @@ echo "Step 5: Setup Flathub"
 echo ""
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    flatpak install telegram flatseal pupgui -y
+    flatpak install telegram flatseal pupgui discord heroic lutris bottles -y
     
 echo ""
 echo "Step 6: Remove apps"
@@ -48,7 +48,7 @@ echo ""
     snap remove firefox
     sudo apt remove libreoffice kmahjongg kmines kpat ksudoku ktorrent snap -y
     sudo apt autoremove -y
-
+    sudo rm -rf $HOME/Downloads/*
 echo ""
 
     clear
