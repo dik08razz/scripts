@@ -54,6 +54,6 @@ echo ""
     sudo apt remove libreoffice kmahjongg kmines kpat ksudoku ktorrent snap -y
     sudo apt autoremove -y
     sudo rm -rf $HOME/Downloads/*
-echo ""
+    sudo rm -rf $HOME/scripts
     clear
     reboot
