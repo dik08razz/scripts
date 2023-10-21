@@ -35,7 +35,7 @@ echo "Step 4: Apps"
 echo ""
     wget -P $HOME/Downloads https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
 
-    sudo apt install mc neofetch flatpak htop gnome-disk-utility qbittorrent mangohud goverlay gamemode timeshift ssh samba ./Downloads/*.deb -y
+    sudo apt install mc neofetch flatpak htop gnome-disk-utility qbittorrent mangohud goverlay gamemode timeshift ssh samba zsh ./Downloads/*.deb -y
     clear
 
 echo ""
