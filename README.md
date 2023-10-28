@@ -7,6 +7,6 @@
 
 # fedoraKDE.sh #
 - Підключення репозиторіїв RPMFusion, Google Chrome та Flathub
-- Інсталювання через dnf пакетів Steam, mc, ssh, samba, zsh, mangohud, goverlay,  htop, gnome-disk-utility
+- Інсталювання через dnf пакетів Steam, mc, zsh, mangohud, goverlay, htop, gnome-disk-utility
 - Істалювання з flathub пакетів Telegram, Lutris, Heroic, Discord, ProtonUP, Flatseal
 - Видаляє ігри KDE
