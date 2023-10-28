@@ -1,9 +1,6 @@
 #!/bin/bash
 
 echo ""
-echo "Післяінсталяційний скрипт для Kubuntu"
-echo "Встановлення останніх оновлень, backports, xanmod та flatpak"
-echo ""
 echo "Step 1: Update"
 echo ""
 
