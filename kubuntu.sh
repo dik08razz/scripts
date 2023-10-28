@@ -9,7 +9,7 @@ echo ""
     clear
 
 echo ""
-echo "Step 2: Kubuntu Backports"
+echo "Step 2: Repository >> Kubuntu Backports"
 echo ""
 
     sudo add-apt-repository ppa:kubuntu-ppa/backports -y
@@ -44,7 +44,7 @@ echo ""
     clear
 
 echo ""
-echo "Step 6: Remove apps"
+echo "Step 6: Cleaning"
 echo ""
 
     snap remove firefox
@@ -53,4 +53,4 @@ echo ""
     sudo rm -rf $HOME/Downloads/*
     sudo rm -rf $HOME/scripts
     clear
-    reboot
+    neofetch

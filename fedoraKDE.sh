@@ -38,3 +38,4 @@ echo ""
     sudo dnf remove kmahjongg kmines kpat ksudoku -y
     sudo rm -rf $HOME/scripts
     clear
+    neofetch
