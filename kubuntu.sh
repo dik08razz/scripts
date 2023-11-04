@@ -48,7 +48,7 @@ echo "Step 6: Cleaning"
 echo ""
 
     snap remove firefox
-    sudo apt remove libreoffice kmahjongg kmines kpat ksudoku ktorrent snap -y
+    sudo apt remove kmahjongg kmines kpat ksudoku -y
     sudo apt autoremove -y
     sudo rm -rf $HOME/Downloads/*
     sudo rm -rf $HOME/scripts

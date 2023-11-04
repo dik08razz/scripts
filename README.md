@@ -5,8 +5,9 @@
 - Істалювання з flathub пакетів Telegram, Lutris, Bottle, Heroic, Discord, ProtonUP, Flatseal
 - Видаляє Firefox (snap) та snap, ігри KDE, libreoffice, ktorrent
 
-# fedoraKDE.sh #
-- Підключення репозиторіїв RPMFusion, Google Chrome та Flathub
-- Інсталювання через dnf пакетів Steam, mc, zsh, mangohud, goverlay, htop, gnome-disk-utility, Google Chrome
+2. fedoraKDE.sh
+- Підключення RPMFusion та Flathub
+- Інсталювання через dnf пакетів Steam, mc, ssh, samba, zsh, mangohud, goverlay,  htop, gnome-disk-utility
 - Істалювання з flathub пакетів Telegram, Lutris, Heroic, Discord, ProtonUP, Flatseal
 - Видаляє ігри KDE
+- Повертає VAAPI з кастомним Mesa
