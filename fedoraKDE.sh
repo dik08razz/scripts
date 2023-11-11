@@ -29,8 +29,8 @@ echo "Step 4: Install apps"
 echo ""
 
     sudo dnf upgrade --refresh
-    sudo dnf mc neofetch htop gnome-disk-utility mangohud goverlay zsh steam google-chrome-stable -y
-    flatpak install telegram flatseal pupgui discord heroic lutris -y
+    sudo dnf mc neofetch htop gnome-disk-utility mangohud goverlay zsh steam  -y
+    flatpak install telegram flatseal pupgui discord heroic lutris google-chrome -y
     clear
 
 echo ""

@@ -40,7 +40,7 @@ echo "Step 5: Setup Flathub"
 echo ""
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    flatpak install telegram flatseal pupgui discord heroic lutris bottles -y
+    flatpak install telegram flatseal pupgui discord heroic lutris bottles google-chrome -y
     clear
 
 echo ""
