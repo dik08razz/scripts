@@ -11,6 +11,7 @@ echo ""
 echo ""
 echo "Step 2: Repository >> Kubuntu Backports"
 echo ""
+sleep 2
 
     sudo add-apt-repository ppa:kubuntu-ppa/backports -y
     sudo apt update -y
@@ -20,6 +21,7 @@ echo ""
 echo ""
 echo "Step 3: XanMod"
 echo ""
+sleep 2
 
     wget -qO - https://dl.xanmod.org/archive.key | sudo gpg --dearmor -o /usr/share/keyrings/xanmod-archive-keyring.gpg
     echo 'deb [signed-by=/usr/share/keyrings/xanmod-archive-keyring.gpg] http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-release.list
@@ -30,6 +32,8 @@ echo ""
 echo ""
 echo "Step 4: Apps"
 echo ""
+sleep 2
+
     wget -P $HOME/Downloads https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
 
     sudo apt install mc neofetch flatpak htop gnome-disk-utility qbittorrent mangohud goverlay gamemode timeshift ssh samba zsh ./Downloads/*.deb -y
@@ -38,6 +42,7 @@ echo ""
 echo ""
 echo "Step 5: Setup Flathub"
 echo ""
+sleep 2
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     flatpak install telegram flatseal pupgui discord heroic lutris bottles google-chrome -y
