@@ -32,7 +32,7 @@ echo ""
 sleep 2
 
     sudo dnf upgrade --refresh
-    sudo dnf mc neofetch htop gnome-disk-utility mangohud goverlay zsh steam google-chrome-stable -y
+    sudo dnf mc neofetch htop mangohud goverlay zsh steam google-chrome-stable -y
     flatpak install telegram flatseal pupgui discord heroic lutris -y
     clear
 
