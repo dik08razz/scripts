@@ -9,7 +9,7 @@ sleep 2
     clear
 
 echo ""
-echo "Step 2: Repository >> RPM Fusion, FWR, Google Chrome, custom Mesa Drivers"
+echo "Step 2: Repository >> RPM Fusion, FWR, Google Chrome"
 echo ""
 sleep 2
 
@@ -33,7 +33,7 @@ sleep 2
 
     sudo dnf upgrade --refresh
     sudo dnf mc neofetch htop mangohud goverlay zsh steam google-chrome-stable -y
-    flatpak install telegram flatseal pupgui discord heroic lutris -y
+    flatpak install telegram pupgui discord heroic lutris -y
     clear
 
 echo ""
