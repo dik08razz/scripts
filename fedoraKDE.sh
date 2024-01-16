@@ -32,7 +32,7 @@ echo ""
 sleep 2
 
     sudo dnf upgrade --refresh
-    sudo dnf install mc neofetch htop mangohud goverlay steam google-chrome-stable -y
+    sudo dnf install mc neofetch htop kcron mangohud goverlay steam google-chrome-stable -y
     flatpak install telegram pupgui discord -y
     clear
 
