@@ -8,7 +8,7 @@ echo "Install apps"
 echo ""
 sleep 1
 
-    sudo pacman -S git base-devel mc htop neofetch steam mangohud goverlay virt-manager telegram-desktop $kdeapps
+    sudo pacman -S git base-devel mc htop neofetch steam mangohud goverlay virt-manager telegram-desktop discord $kdeapps
     clear
 
 echo ""
@@ -47,7 +47,7 @@ echo "bluetooth"
 echo "sshd"
     sudo systemctl start sshd
     sudo systemctl enable sshd
-    
+
 echo ""
 echo "Cleaning"
 echo ""
