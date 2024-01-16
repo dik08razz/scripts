@@ -43,10 +43,22 @@ sleep 1
 echo "bluetooth"
     sudo systemctl start bluetooth
     sudo systemctl enable bluetooth
+sleep 1
 
+echo ""
 echo "sshd"
     sudo systemctl start sshd
     sudo systemctl enable sshd
+sleep 1
+
+echo ""
+echo "libvirt"
+    sudo systemctl start libvirtd.service
+    sudo systemctl enable libvirtd.service
+    sudo systemctl start libvirtd.socket
+    sudo systemctl enable libvirtd.socket
+sleep 1
+clear
 
 echo ""
 echo "Cleaning"
