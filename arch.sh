@@ -8,7 +8,7 @@ echo "Install apps"
 echo ""
 sleep 1
 
-    sudo pacman -S git base-devel mc htop neofetch steam mangohud goverlay virt-manager telegram-desktop discord $kdeapps
+    sudo pacman -S base-devel mc htop neofetch steam mangohud goverlay virt-manager qemu telegram-desktop discord $kdeapps
     clear
 
 echo ""
@@ -53,8 +53,6 @@ sleep 1
 
 echo ""
 echo "libvirt"
-    sudo systemctl start libvirtd.service
-    sudo systemctl enable libvirtd.service
     sudo systemctl start libvirtd.socket
     sudo systemctl enable libvirtd.socket
 sleep 1
