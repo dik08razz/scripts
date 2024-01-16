@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ""
-echo "Step 1: Update"
+echo "Update"
 echo ""
 sleep 2
 
@@ -9,7 +9,7 @@ sleep 2
     clear
 
 echo ""
-echo "Step 2: Repository >> RPM Fusion, FWR, Google Chrome"
+echo "Repository >> RPM Fusion, FWR, Google Chrome"
 echo ""
 sleep 2
 
@@ -19,7 +19,7 @@ sleep 2
     clear
 
 echo ""
-echo "Step 3: Set flathub"
+echo "Set flathub"
 echo ""
 sleep 2
 
@@ -27,17 +27,17 @@ sleep 2
     clear
 
 echo ""
-echo "Step 4: Install apps"
+echo "Install apps"
 echo ""
 sleep 2
 
     sudo dnf upgrade --refresh
-    sudo dnf install mc neofetch htop mangohud goverlay zsh steam google-chrome-stable -y
-    flatpak install telegram pupgui discord heroic lutris -y
+    sudo dnf install mc neofetch htop mangohud goverlay steam google-chrome-stable -y
+    flatpak install telegram pupgui discord -y
     clear
 
 echo ""
-echo "Step 5: Cleaning"
+echo "Cleaning"
 echo ""
 sleep 2
 

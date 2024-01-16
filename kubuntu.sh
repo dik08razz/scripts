@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo ""
-echo "Step 1: Update"
+echo "Update"
 echo ""
 
     sudo apt update -y
@@ -9,7 +9,7 @@ echo ""
     clear
 
 echo ""
-echo "Step 2: Repository >> Kubuntu Backports"
+echo "Repository >> Kubuntu Backports"
 echo ""
 sleep 2
 
@@ -19,7 +19,7 @@ sleep 2
     clear
 
 echo ""
-echo "Step 3: XanMod"
+echo "Installing XanMod"
 echo ""
 sleep 2
 
@@ -30,17 +30,17 @@ sleep 2
     clear
 
 echo ""
-echo "Step 4: Apps"
+echo "Apps"
 echo ""
 sleep 2
 
     wget -P $HOME/Downloads https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
 
-    sudo apt install mc neofetch flatpak htop gnome-disk-utility qbittorrent mangohud goverlay gamemode timeshift ssh samba zsh ./Downloads/*.deb -y
+    sudo apt install mc neofetch flatpak htop gnome-disk-utility qbittorrent mangohud goverlay gamemode timeshift ssh samba ./Downloads/*.deb -y
     clear
 
 echo ""
-echo "Step 5: Setup Flathub"
+echo "Setup Flathub"
 echo ""
 sleep 2
 
@@ -49,7 +49,7 @@ sleep 2
     clear
 
 echo ""
-echo "Step 6: Cleaning"
+echo "Cleaning"
 echo ""
 
     snap remove firefox
