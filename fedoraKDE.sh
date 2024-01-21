@@ -16,6 +16,8 @@ sleep 2
     sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
     sudo dnf install fedora-workstation-repositories -y
     sudo dnf config-manager --set-enabled google-chrome
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
     clear
 
 echo ""
@@ -32,7 +34,7 @@ echo ""
 sleep 2
 
     sudo dnf upgrade --refresh
-    sudo dnf install mc neofetch htop kcron mangohud goverlay steam google-chrome-stable -y
+    sudo dnf install mc neofetch htop kcron mangohud goverlay steam google-chrome-stable code -y
     flatpak install telegram pupgui discord -y
     clear
 
