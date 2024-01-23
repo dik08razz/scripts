@@ -8,7 +8,7 @@ echo "Install apps"
 echo ""
 sleep 1
 
-    sudo pacman -S base-devel mc htop neofetch steam mangohud goverlay virt-manager qemu telegram-desktop discord $kdeapps
+    sudo pacman -S base-devel mc htop neofetch steam mangohud goverlay virt-manager qemu-full telegram-desktop discord $kdeapps
     clear
 
 echo ""
