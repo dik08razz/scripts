@@ -14,7 +14,7 @@ echo "Install apps"
 echo ""
 sleep 1
 
-    sudo pacman -S base-devel steam mangohud goverlay telegram-desktop discord $baseapps $kdeapps $power
+    sudo pacman -S base-devel steam mangohud goverlay telegram-desktop discord $baseapps $kdeapps $power $virtualization
     clear
 
 echo ""
