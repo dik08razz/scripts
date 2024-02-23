@@ -1,15 +1,20 @@
 #!/bin/bash
 
+#var
+baseapps="mc htop neofetch timeshift"
 kdeapps="ark dolphin dolphin-plugins elisa gwenview kate kcalc kcron kdeconnect kdenetwork-filesharing kdenlive kdialog kfind kgpg kjournald krdc krfb ksystemlog kwalletmanager okular partitionmanager signon-kwallet-extension spectacle" 
-
 asianfonts="adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-otc-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts adobe-source-han-serif-jp-fonts adobe-source-han-serif-kr-fonts adobe-source-han-serif-otc-fonts adobe-source-han-serif-tw-fonts"
+fonts="cantarell-fonts freetype noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ttf-bitstream-vera ttf-dejavu ttf-liberation ttf-opensans"
+power="power-profiles-daemon upower"
+virtualization="virt-manager qemu-full"
+
 
 echo ""
 echo "Install apps"
 echo ""
 sleep 1
 
-    sudo pacman -S base-devel mc htop neofetch steam mangohud goverlay virt-manager qemu-full telegram-desktop discord timeshift $kdeapps
+    sudo pacman -S base-devel steam mangohud goverlay telegram-desktop discord $baseapps $kdeapps $power
     clear
 
 echo ""
@@ -35,7 +40,7 @@ echo ""
 echo "Install asian font and emoji"
 echo ""
 
-    sudo pacman -S noto-fonts-emoji $asianfonts
+    sudo pacman -S $fonts $asianfonts
 
 echo ""
 echo "Start services"
@@ -64,9 +69,9 @@ echo "Cleaning"
 echo ""
 sleep 
 
-    rm -rf $HOME/scripts
-    rm -rf $HOME/yay-bin
     clear
     neofetch
-    sleep 5
-    systemctl reboot
+
+echo ""
+echo "Finish"
+
