@@ -43,9 +43,16 @@ echo ""
     sudo pacman -S $fonts $asianfonts
 
 echo ""
-echo "Start services"
+echo "Install flatpak"
+echo ""
+
+    sudo pacman -S flatpak flatpak-kcm
+
+echo ""
+echo "Services"
 echo ""
 sleep 1
+
 echo "bluetooth"
     sudo systemctl start bluetooth
     sudo systemctl enable bluetooth
@@ -74,4 +81,3 @@ sleep
 
 echo ""
 echo "Finish"
-
