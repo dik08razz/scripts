@@ -26,7 +26,6 @@ clear
 snap remove firefox
 sudo apt remove kmahjongg kmines kpat ksudoku -y
 sudo apt autoremove -y
-sudo rm -rf $HOME/Downloads/*
-sudo rm -rf $HOME/scripts
+sudo rm -rf $HOME/Downloads/*.deb
 
 neofetch
