@@ -7,77 +7,33 @@ asianfonts="adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-
 fonts="cantarell-fonts freetype noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ttf-bitstream-vera ttf-dejavu ttf-liberation ttf-opensans"
 power="power-profiles-daemon upower"
 virtualization="virt-manager qemu-full"
+gaming="steam mangohud goverlay"
+social="telegram-desktop discord"
 
+cd $HOME
 
-echo ""
-echo "Install apps"
-echo ""
-sleep 1
+sudo pacman -S base-devel $gaming $social $baseapps $kdeapps $power $virtualization
 
-    sudo pacman -S base-devel steam mangohud goverlay telegram-desktop discord $baseapps $kdeapps $power $virtualization
-    clear
+git clone https://aur.archlinux.org/yay-bin.git
+cd $HOME/yay-bin
+makepkg -si
+cd $HOME
+rm -rf $HOME/yay-bin
 
-echo ""
-echo "Install yay"
-echo ""
-sleep 1
+yay -Syu google-chrome visual-studio-code-bin
 
-    git clone https://aur.archlinux.org/yay-bin.git
-    cd ./yay-bin
-    makepkg -si
-    cd ..
-    clear
+sudo pacman -S $fonts $asianfonts
 
-echo ""
-echo "Install Chrome & vscode"
-echo ""
-sleep 1
+sudo pacman -S flatpak flatpak-kcm
 
-    yay -Syu google-chrome visual-studio-code-bin
-    clear
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
 
-echo ""
-echo "Install asian font and emoji"
-echo ""
+sudo systemctl start sshd
+sudo systemctl enable sshd
 
-    sudo pacman -S $fonts $asianfonts
+sudo systemctl start libvirtd.socket
+sudo systemctl enable libvirtd.socket
 
-echo ""
-echo "Install flatpak"
-echo ""
+neofetch
 
-    sudo pacman -S flatpak flatpak-kcm
-
-echo ""
-echo "Services"
-echo ""
-sleep 1
-
-echo "bluetooth"
-    sudo systemctl start bluetooth
-    sudo systemctl enable bluetooth
-sleep 1
-
-echo ""
-echo "sshd"
-    sudo systemctl start sshd
-    sudo systemctl enable sshd
-sleep 1
-
-echo ""
-echo "libvirt"
-    sudo systemctl start libvirtd.socket
-    sudo systemctl enable libvirtd.socket
-sleep 1
-clear
-
-echo ""
-echo "Cleaning"
-echo ""
-sleep 
-
-    clear
-    neofetch
-
-echo ""
-echo "Finish"
