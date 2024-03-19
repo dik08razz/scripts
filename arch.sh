@@ -7,7 +7,7 @@ fonts="cantarell-fonts freetype noto-fonts noto-fonts-emoji noto-fonts-cjk noto-
 power="power-profiles-daemon upower"
 virtualization="virt-manager qemu-full"
 networks="openvpn networkmanager-openvpn"
-gaming="steam mangohud goverlay"
+gaming="steam mangohud goverlay gamemode"
 social="telegram-desktop discord"
 
 cd $HOME
