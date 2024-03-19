@@ -22,7 +22,7 @@ rm -rf $HOME/yay-bin
 
 yay -Syu google-chrome visual-studio-code-bin
 
-sudo pacman -S $fonts $asianfonts
+sudo pacman -S $fonts
 
 sudo pacman -S flatpak flatpak-kcm
 
