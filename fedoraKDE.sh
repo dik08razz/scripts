@@ -9,15 +9,13 @@ sudo dnf install fedora-workstation-repositories -y
 sudo dnf config-manager --set-enabled google-chrome
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-clear
 
+sudo dnf copr enable atim/heroic-games-launcher
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-clear
 
 sudo dnf upgrade --refresh
-sudo dnf install mc neofetch htop kcron mangohud goverlay steam google-chrome-stable code -y
-flatpak install telegram pupgui discord -y
-clear
+sudo dnf install neovim mc neofetch htop kcron mangohud goverlay steam google-chrome-stable code heroic-games-launcher-bin -y
+flatpak install telegram discord -y
 
 sudo dnf remove kmahjongg kmines kpat ksudoku -y
     
