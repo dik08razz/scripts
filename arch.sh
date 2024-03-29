@@ -13,8 +13,12 @@ social="telegram-desktop discord"
 
 cd $HOME
 
-sudo pacman -S base-devel $gaming $social $baseapps $kdeapps $virtualization $networks --noconfirm
-sudo pacman -S $power
+sudo pacman -S base-devel --noconfirm
+sudo pacman -S $baseapps --noconfirm
+sudo pacman -S $kdeapps --noconfirm
+sudo pacman -S $networks --noconfirm
+sudo pacman -S $virtualization --noconfirm
+sudo pacman -S $power --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd $HOME/yay-bin
@@ -26,6 +30,9 @@ yay -Syu google-chrome visual-studio-code-bin heroic-games-launcher-bin --noconf
 
 sudo pacman -S $fonts --noconfirm
 sudo pacman -S $asianfonts --noconfirm
+
+sudo pacman -S $gaming --noconfirm
+sudo pacman -S $social --noconfirm
 
 sudo pacman -S flatpak flatpak-kcm --noconfirm
 
