@@ -7,7 +7,7 @@ fonts="cantarell-fonts freetype noto-fonts noto-fonts-emoji noto-fonts-cjk noto-
 asianfonts="adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-otc-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts adobe-source-han-serif-jp-fonts adobe-source-han-serif-kr-fonts adobe-source-han-serif-otc-fonts adobe-source-han-serif-tw-fonts"
 power="power-profiles-daemon upower"
 virtualization="virt-manager qemu-full"
-networks="openvpn networkmanager-openvpn sshfs"
+networks="openvpn networkmanager-openvpn sshfs bridge-utils"
 gaming="steam mangohud goverlay gamemode gamescope"
 social="telegram-desktop discord"
 
