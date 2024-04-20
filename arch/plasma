@@ -13,7 +13,7 @@ social="telegram-desktop discord"
 
 cd $HOME
 
-sudo pacman -S base-devel --noconfirm
+sudo pacman -S $base-devel --noconfirm
 sudo pacman -S $baseapps --noconfirm
 sudo pacman -S $kdeapps --noconfirm
 sudo pacman -S $networks --noconfirm

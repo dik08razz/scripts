@@ -2,22 +2,29 @@
 
 cd $HOME
 
+### Full upgrade system
 sudo dnf upgrade --refresh -y
 
+## RPM Fusion ##
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install fedora-workstation-repositories -y
+
+## Google Chrome repo
 sudo dnf config-manager --set-enabled google-chrome
+
+## Visual Studio Code repo
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 
-sudo dnf copr enable atim/heroic-games-launcher
+### Flatpak repository
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-sudo dnf upgrade --refresh
-sudo dnf install neovim mc neofetch htop kcron mangohud goverlay steam google-chrome-stable code heroic-games-launcher-bin -y
+sudo dnf install neovim mc neofetch htop kcron google-chrome-stable code -y
 flatpak install telegram discord -y
 
-sudo dnf remove kmahjongg kmines kpat ksudoku -y
+### Cleaning
+sudo dnf remove kmahjongg kmines kpat ksudoku kmail korganizer ktnef kontact kmousetool -y
+sudo dnf remove $(dnf list | grep libreoffice | awk '{print $1}') -y
     
 sudo systemctl start sshd
 sudo systemctl enable sshd
