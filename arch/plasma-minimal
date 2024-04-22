@@ -32,10 +32,6 @@ sudo pacman -S $asianfonts --noconfirm
 
 sudo pacman -S $social --noconfirm
 
-sudo pacman -S flatpak flatpak-kcm --noconfirm
-
-sudo flatpak override --nosocket=wayland
-
 sudo systemctl start bluetooth
 sudo systemctl enable bluetooth
 

@@ -36,7 +36,14 @@ sudo pacman -S $social --noconfirm
 
 sudo pacman -S flatpak flatpak-kcm --noconfirm
 
-sudo flatpak override --nosocket=wayland
+echo "set flatpak"
+# sudo flatpak override --nosocket=wayland
+flatpak -u override --filesystem=/usr/share/icons/:ro
+flatpak -u override --filesystem=/home/$USER/.icons/:ro 
+flatpak -u override --filesystem=xdg-config/gtk-3.0:ro
+flatpak -u override --env=XCURSOR_PATH=~/.icons
+flatpak -u override --env=XCURSOR_THEME=breeze
+flatpak -u override --env=XCURSOR_SIZE=24
 
 sudo systemctl start bluetooth
 sudo systemctl enable bluetooth
