@@ -26,7 +26,7 @@ makepkg -si
 cd $HOME
 rm -rf $HOME/yay-bin
 
-yay -Syu google-chrome visual-studio-code-bin heroic-games-launcher-bin --noconfirm
+yay -Syu google-chrome visual-studio-code-bin --noconfirm
 
 sudo pacman -S $fonts --noconfirm
 sudo pacman -S $asianfonts --noconfirm
