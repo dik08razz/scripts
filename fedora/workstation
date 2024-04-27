@@ -1,0 +1,27 @@
+#!/bin/bash
+
+cd $HOME
+
+### Full upgrade system
+sudo dnf upgrade --refresh -y
+
+## Google Chrome repo
+sudo dnf config-manager --set-enabled google-chrome
+
+## Visual Studio Code repo
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+
+### Flatpak repository
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+sudo dnf install neovim mc neofetch htop mangohud goverlay steam google-chrome-stable code -y
+flatpak install telegram discord -y
+
+### Cleaning
+sudo dnf remove $(dnf list | grep libreoffice | awk '{print $1}') -y
+    
+sudo systemctl start sshd
+sudo systemctl enable sshd
+
+neofetch
