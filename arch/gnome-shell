@@ -43,6 +43,9 @@ flatpak -u override --env=XCURSOR_PATH=~/.icons
 flatpak -u override --env=XCURSOR_THEME=breeze
 flatpak -u override --env=XCURSOR_SIZE=24
 
+sudo pacman -S terminus-font
+sudo setfont ter-v16b
+
 sudo systemctl start bluetooth
 sudo systemctl enable bluetooth
 
