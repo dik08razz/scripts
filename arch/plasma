@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #var
-baseapps="mc htop neofetch timeshift p7zip"
+baseapps="mc htop fastfetch timeshift p7zip"
 kdeapps="filelight ark dolphin dolphin-plugins elisa gwenview kate kcalc kcron kdeconnect kdenetwork-filesharing kdenlive kdialog kfind kgpg kjournald krdc krfb ksystemlog kwalletmanager okular partitionmanager signon-kwallet-extension spectacle" 
 fonts="terminus-font cantarell-fonts freetype noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ttf-bitstream-vera ttf-dejavu ttf-liberation ttf-opensans"
 asianfonts="adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-otc-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts adobe-source-han-serif-jp-fonts adobe-source-han-serif-kr-fonts adobe-source-han-serif-otc-fonts adobe-source-han-serif-tw-fonts"
@@ -47,14 +47,11 @@ flatpak -u override --env=XCURSOR_SIZE=24
 
 sudo setfont ter-v16b
 
-sudo systemctl start bluetooth
-sudo systemctl enable bluetooth
+sudo systemctl enable --now bluetooth
 
-sudo systemctl start sshd
-sudo systemctl enable sshd
+sudo systemctl enable --now sshd
 
-sudo systemctl start libvirtd.socket
-sudo systemctl enable libvirtd.socket
+sudo systemctl enable --now libvirtd.socket
 
-neofetch
+fastfetch
 
