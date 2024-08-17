@@ -20,7 +20,6 @@ sudo dnf install neovim mc neofetch htop mangohud goverlay steam google-chrome-s
 ### Cleaning
 sudo dnf remove $(dnf list | grep libreoffice | awk '{print $1}') -y
     
-sudo systemctl start sshd
-sudo systemctl enable sshd
+sudo systemctl enable --now sshd
 
 neofetch
