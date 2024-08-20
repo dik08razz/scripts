@@ -22,19 +22,13 @@ sudo dnf copr enable atim/heroic-games-launcher -y
 ### Flatpak repository
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-sudo dnf install neovim mc neofetch htop kcron mangohud goverlay steam google-chrome-stable code heroic-games-launcher-bin
-flatpak install telegram discord -y
+sudo dnf install neovim mc fastfetch htop kcron mangohud goverlay steam google-chrome-stable code heroic-games-launcher-bin
+#flatpak install telegram discord -y
 
 ### Cleaning
 sudo dnf remove kmahjongg kmines kpat ksudoku kmail korganizer ktnef kontact kmousetool -y
 sudo dnf remove $(dnf list | grep libreoffice | awk '{print $1}') -y
-dnf list | grep wine | awk '{print $1}' >> ./wine
-sudo dnf remove $(dnf list | grep wine | awk '{print $1}') -y
-
-### Install winefonts
-sudo dnf install $(cat ./wine | grep fonts)
-rm -rf ./wine
     
 sudo systemctl enable --now sshd
 
-neofetch
+fastfetch

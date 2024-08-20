@@ -15,11 +15,11 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 ### Flatpak repository
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-sudo dnf install neovim mc neofetch htop mangohud goverlay steam google-chrome-stable code -y
+sudo dnf install neovim mc fastfetch htop mangohud goverlay steam google-chrome-stable code -y
 
 ### Cleaning
 sudo dnf remove $(dnf list | grep libreoffice | awk '{print $1}') -y
     
 sudo systemctl enable --now sshd
 
-neofetch
+fastfetch
