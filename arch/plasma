@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #var
+pipewire="pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber"
 plasma="plasma-meta konsole kwrite dolphin ark plasma-workspace egl-wayland"
 baseapps="git curl mc htop fastfetch timeshift p7zip"
 kdeapps="filelight ark dolphin dolphin-plugins elisa gwenview kate kcalc kcron kdeconnect kdenetwork-filesharing kdenlive kdialog kfind kgpg kjournald krdc krfb ksystemlog kwalletmanager okular partitionmanager signon-kwallet-extension spectacle" 
