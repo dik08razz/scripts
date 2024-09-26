@@ -28,6 +28,9 @@ sudo dnf install neovim mc fastfetch htop kcron mangohud goverlay steam google-c
 ### Cleaning
 sudo dnf remove kmahjongg kmines kpat ksudoku kmail korganizer ktnef kontact kmousetool -y
 sudo dnf remove $(dnf list | grep libreoffice | awk '{print $1}') -y
+
+### Multimedia
+#sudo dnf group install Multimedia
     
 sudo systemctl enable --now sshd
 
