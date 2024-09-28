@@ -18,7 +18,7 @@ cd $HOME
 sudo pacman -S $plasma
 sudo pacman -S $pipewire
 
-sudo pacman -S base-devel --noconfirm
+sudo pacman -S base-devel zsh grml-zsh-config --noconfirm
 sudo pacman -S $baseapps --noconfirm
 sudo pacman -S $kdeapps --noconfirm
 sudo pacman -S $networks --noconfirm
