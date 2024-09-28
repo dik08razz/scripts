@@ -15,6 +15,9 @@ social="telegram-desktop discord"
 
 cd $HOME
 
+sudo pacman -S $plasma
+sudo pacman -S $pipewire
+
 sudo pacman -S base-devel --noconfirm
 sudo pacman -S $baseapps --noconfirm
 sudo pacman -S $kdeapps --noconfirm
@@ -33,6 +36,7 @@ yay -Syu google-chrome visual-studio-code-bin --noconfirm
 sudo pacman -S $fonts --noconfirm
 sudo pacman -S $asianfonts --noconfirm
 
+sudo pacman -S vulkan-radeon lib32-vulkan-radeon --noconfirm
 sudo pacman -S $gaming --noconfirm
 sudo pacman -S $social --noconfirm
 
