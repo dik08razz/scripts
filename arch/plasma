@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#var
+#package
 pipewire="pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber"
 plasma="plasma-meta konsole kwrite dolphin ark plasma-workspace egl-wayland"
 baseapps="git curl mc htop fastfetch timeshift p7zip"
@@ -12,37 +12,23 @@ virtualization="virt-manager qemu-full"
 networks="openvpn networkmanager-openvpn sshfs bridge-utils dnsmasq"
 gaming="steam mangohud goverlay gamemode gamescope"
 social="telegram-desktop discord"
+radv="vulkan-radeon lib32-vulkan-radeon"
+zsh="zsh grml-zsh-config"
+flatpak="flatpak flatpak-kcm"
 
 cd $HOME
 
-sudo pacman -S $plasma
-sudo pacman -S $pipewire
-
-sudo pacman -S base-devel zsh grml-zsh-config --noconfirm
-sudo pacman -S $baseapps --noconfirm
-sudo pacman -S $kdeapps --noconfirm
-sudo pacman -S $networks --noconfirm
-sudo pacman -S $virtualization --noconfirm
-sudo pacman -S $power --noconfirm
+sudo pacman -S $plasma $pipewire $baseapps $kdeapps $fonts $asianfonts $power $radv $zsh $flatpak $networks --noconfirm
+sudo pacman -S $virtualization $gaming $social --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd $HOME/yay-bin
-makepkg -si
+makepkg -si --noconfirm
 cd $HOME
 rm -rf $HOME/yay-bin
 
 yay -Syu google-chrome visual-studio-code-bin --noconfirm
 
-sudo pacman -S $fonts --noconfirm
-sudo pacman -S $asianfonts --noconfirm
-
-sudo pacman -S vulkan-radeon lib32-vulkan-radeon --noconfirm
-sudo pacman -S $gaming --noconfirm
-sudo pacman -S $social --noconfirm
-
-sudo pacman -S flatpak flatpak-kcm --noconfirm
-
-echo "set flatpak"
 # sudo flatpak override --nosocket=wayland
 flatpak -u override --filesystem=/usr/share/icons/:ro
 flatpak -u override --filesystem=/home/$USER/.icons/:ro 
@@ -51,13 +37,9 @@ flatpak -u override --env=XCURSOR_PATH=~/.icons
 flatpak -u override --env=XCURSOR_THEME=breeze
 flatpak -u override --env=XCURSOR_SIZE=24
 
+# set system
 sudo setfont ter-v16b
-
-sudo systemctl enable --now bluetooth
-
-sudo systemctl enable --now sshd
-
-sudo systemctl enable --now libvirtd.socket
+sudo systemctl enable --now bluetooth sshd libvirtd.socket
 
 fastfetch
 
