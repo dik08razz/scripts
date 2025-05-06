@@ -19,7 +19,7 @@ flatpak="flatpak flatpak-kcm"
 cd $HOME
 
 sudo pacman -S $plasma $pipewire $baseapps $kdeapps $fonts $asianfonts $power $radv $zsh $flatpak $networks --noconfirm
-sudo pacman -S $virtualization $gaming $social --noconfirm
+sudo pacman -S $gaming $social --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd $HOME/yay-bin
