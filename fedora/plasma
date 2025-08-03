@@ -17,7 +17,8 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 sudo dnf install neovim mc fastfetch htop kcron mangohud goverlay steam code
-#flatpak install telegram discord -y
+sudo dnf install telegram discord -y
+sudo dnf install google-noto-fonts-all -y
 
 ### Cleaning
 sudo dnf remove kmahjongg kmines kpat ksudoku kmail korganizer ktnef kontact kmousetool -y
