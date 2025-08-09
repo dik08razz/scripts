@@ -18,7 +18,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 sudo dnf install neovim mc fastfetch htop kcron mangohud goverlay steam code
 sudo dnf install telegram discord -y
-sudo dnf install google-noto-fonts-all -y
+sudo dnf install google-noto-fonts-all msttcorefonts -y
 
 ### Cleaning
 sudo dnf remove kmahjongg kmines kpat ksudoku kmail korganizer ktnef kontact kmousetool -y
