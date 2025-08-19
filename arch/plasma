@@ -15,10 +15,19 @@ social="telegram-desktop discord"
 radv="vulkan-radeon lib32-vulkan-radeon"
 zsh="zsh grml-zsh-config"
 flatpak="flatpak flatpak-kcm"
+printer="cups"
 
 cd $HOME
 
-sudo pacman -S $plasma $pipewire $baseapps $kdeapps $fonts $asianfonts $power $radv $zsh $flatpak $networks --noconfirm
+sudo pacman -S $plasma $pipewire $kdeapps $fonts $asianfonts --noconfirm
+sudo pacman -S $baseapps --noconfirm
+sudo pacman -S $printer
+sudo pacman -S $power --noconfirm
+sudo pacman -S $radv --noconfirm
+sudo pacman -S $flatpak --noconfirm
+sudo pacman -S $zsh --noconfirm
+sudo pacman -S $networks --noconfirm
+sudo pacman -S $virtualization --noconfirm
 sudo pacman -S $gaming $social --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
