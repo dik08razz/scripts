@@ -15,7 +15,7 @@ social="telegram-desktop discord"
 radv="vulkan-radeon lib32-vulkan-radeon"
 zsh="zsh grml-zsh-config"
 flatpak="flatpak flatpak-kcm"
-printer="cups"
+printer="cups cups-pdf cups-filters cups-pk-helper ghostscript gsfonts hplip system-config-printer"
 
 cd $HOME
 
