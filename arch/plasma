@@ -21,7 +21,7 @@ cd $HOME
 
 sudo pacman -S $plasma $pipewire $kdeapps $fonts $asianfonts --noconfirm
 sudo pacman -S $baseapps --noconfirm
-sudo pacman -S $printer
+sudo pacman -S $printer --noconfirm
 sudo pacman -S $power --noconfirm
 sudo pacman -S $radv --noconfirm
 sudo pacman -S $flatpak --noconfirm
