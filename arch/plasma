@@ -19,7 +19,11 @@ printer="cups"
 
 cd $HOME
 
-sudo pacman -S $plasma $pipewire $kdeapps $fonts $asianfonts --noconfirm
+sudo pacman -S $plasma --noconfirm
+sudo pacman -S $asianfonts --noconfirm
+sudo pacman -S $pipewire --noconfirm
+sudo pacman -S $kdeapps --noconfirm
+sudo pacman -S $fonts --noconfirm
 sudo pacman -S $baseapps --noconfirm
 sudo pacman -S $printer --noconfirm
 sudo pacman -S $power --noconfirm
