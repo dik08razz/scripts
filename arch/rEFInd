@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo pacman -Syu git refind shim sbsigntools efibootmgr 
+# package
+
+printf "Інсталяція пакунків...\n"
+
+pacman -Syu git refind shim sbsigntools efibootmgr
 
 git clone https://aur.archlinux.org/preloader-signed.git
 cd preloader-signed
@@ -12,3 +16,9 @@ cd shim-signed
 makepkg -si --noconfirm
 cd ..
 
+printf "Інсталяція rEFInd...\n"
+
+refind-install --preloader /usr/share/preloader-signed/PreLoader.efi 
+refind-install --shim /usr/share/shim-signed/shimx64.efi --localkeys
+
+sbsign --key /etc/refind.d/keys/refind_local.key --cert /etc/refind.d/keys/refind_local.crt --output /boot/vmlinuz-linux-zen /boot/vmlinuz-linux-zen
