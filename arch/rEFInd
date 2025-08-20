@@ -23,3 +23,16 @@ refind-install --preloader /usr/share/preloader-signed/PreLoader.efi
 refind-install --shim /usr/share/shim-signed/shimx64.efi --localkeys
 
 sbsign --key /etc/refind.d/keys/refind_local.key --cert /etc/refind.d/keys/refind_local.crt --output /boot/vmlinuz-linux-zen /boot/vmlinuz-linux-zen
+
+## Автоматичне підписування ядра при оновленні через hook
+mkdir -p /etc/pacman.d/hooks
+cat << EOF > /etc/pacman.d/hooks/99-refind.hook
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = linux-zen
+[Action]
+Description = Підписування ядра rEFInd...
+When = PostTransaction
+Exec = /usr/bin/sbsign --key /etc/refind.d/keys/refind_local.key --cert /etc/refind.d/keys/refind_local.crt --output /boot/vmlinuz-linux-zen /boot/vmlinuz-linux-zen
+EOF
