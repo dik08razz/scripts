@@ -5,17 +5,19 @@
 
 printf "Інсталяція пакунків...\n"
 
-pacman -Syu git refind shim sbsigntools efibootmgr
+pacman -Syu refind shim sbsigntools efibootmgr
 
 git clone https://aur.archlinux.org/preloader-signed.git
 cd preloader-signed
 makepkg -si --noconfirm
 cd ..
+rm -rf preloader-signed
 
 git clone https://aur.archlinux.org/shim-signed.git
 cd shim-signed
 makepkg -si --noconfirm
 cd ..
+rm -rf shim-signed
 
 printf "Інсталяція rEFInd...\n"
 
@@ -32,7 +34,7 @@ Type = Package
 Operation = Upgrade
 Target = linux-zen
 [Action]
-Description = Підписування ядра rEFInd...
+Description = Sign kernel for rEFInd...
 When = PostTransaction
 Exec = /usr/bin/sbsign --key /etc/refind.d/keys/refind_local.key --cert /etc/refind.d/keys/refind_local.crt --output /boot/vmlinuz-linux-zen /boot/vmlinuz-linux-zen
 EOF

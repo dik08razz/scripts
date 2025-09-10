@@ -5,6 +5,9 @@ cd $HOME
 ### Full upgrade system
 sudo dnf upgrade --refresh -y
 
+## Enable google-chrome repo
+sudo dnf config-manager setopt google-chrome.enabled=1
+
 ## Visual Studio Code repo
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
