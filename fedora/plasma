@@ -5,7 +5,7 @@ cd $HOME
 ### Full upgrade system
 sudo dnf upgrade --refresh -y
 
-## RPM Fusion ##
+## RPM Fusion
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install fedora-workstation-repositories -y
 
@@ -13,19 +13,20 @@ sudo dnf install fedora-workstation-repositories -y
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 
+## Enable google-chrome repo
+sudo dnf config-manager setopt google-chrome.enabled=1
+
 ### Flatpak repository
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 sudo dnf install neovim mc fastfetch htop kcron mangohud goverlay steam code
 sudo dnf install telegram discord -y
-sudo dnf install google-noto-fonts-all msttcorefonts -y
+sudo dnf install google-chrome-stable -y
+sudo dnf install google-noto-fonts-all mscore-fonts-all -y
 
 ### Cleaning
 sudo dnf remove kmahjongg kmines kpat ksudoku kmail korganizer ktnef kontact kmousetool -y
-sudo dnf remove $(dnf list | grep libreoffice | awk '{print $1}') -y
-
-### Multimedia
-#sudo dnf group install Multimedia
+# sudo dnf remove $(dnf list | grep libreoffice | awk '{print $1}') -y
     
 sudo systemctl enable --now sshd
 
