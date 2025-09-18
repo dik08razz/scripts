@@ -40,7 +40,7 @@ makepkg -si --noconfirm
 cd $HOME
 rm -rf $HOME/yay-bin
 
-yay -Syu google-chrome visual-studio-code-bin --noconfirm
+yay -Syu google-chrome visual-studio-code-bin ttf-ms-fonts --noconfirm
 
 # sudo flatpak override --nosocket=wayland
 flatpak -u override --filesystem=/usr/share/icons/:ro
