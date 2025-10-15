@@ -1,11 +1,12 @@
 #!/bin/bash
 
-#package
+#PKG
 pipewire="pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber"
 plasma="plasma-meta konsole kwrite dolphin ark plasma-workspace egl-wayland"
 baseapps="git curl mc htop fastfetch timeshift p7zip"
 kdeapps="filelight ark dolphin dolphin-plugins elisa gwenview kate kcalc kcron kdeconnect kdenetwork-filesharing kdenlive kdialog kfind kgpg kjournald krdc krfb ksystemlog kwalletmanager okular partitionmanager signon-kwallet-extension spectacle" 
 fonts="terminus-font cantarell-fonts freetype noto-fonts noto-fonts-cjk noto-fonts-extra ttf-bitstream-vera ttf-dejavu ttf-liberation ttf-opensans"
+msfonts="ttf-ms-fonts ttf-vista-fonts"
 asianfonts="adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-otc-fonts adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts adobe-source-han-serif-jp-fonts adobe-source-han-serif-kr-fonts adobe-source-han-serif-otc-fonts adobe-source-han-serif-tw-fonts"
 power="power-profiles-daemon upower"
 virtualization="virt-manager qemu-full"
@@ -40,9 +41,11 @@ makepkg -si --noconfirm
 cd $HOME
 rm -rf $HOME/yay-bin
 
-yay -Syu google-chrome visual-studio-code-bin ttf-ms-fonts --noconfirm
+yay -Syu google-chrome visual-studio-code-bin --noconfirm
+yay -Syu $msfonts --noconfirm
 
-# sudo flatpak override --nosocket=wayland
+
+#sudo flatpak override --nosocket=wayland
 flatpak -u override --filesystem=/usr/share/icons/:ro
 flatpak -u override --filesystem=/home/$USER/.icons/:ro 
 flatpak -u override --filesystem=xdg-config/gtk-3.0:ro
@@ -50,8 +53,7 @@ flatpak -u override --env=XCURSOR_PATH=~/.icons
 flatpak -u override --env=XCURSOR_THEME=breeze
 flatpak -u override --env=XCURSOR_SIZE=24
 
-# set system
-sudo setfont ter-v16b
+# set systemd
 sudo systemctl enable --now bluetooth sshd libvirtd.socket
 
 fastfetch
