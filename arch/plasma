@@ -34,6 +34,7 @@ sudo pacman -S $zsh --noconfirm
 sudo pacman -S $networks --noconfirm
 sudo pacman -S $virtualization --noconfirm
 sudo pacman -S $gaming $social --noconfirm
+sudo pacman -S libreoffice-fresh --noconfirm
 
 git clone https://aur.archlinux.org/yay-bin.git
 cd $HOME/yay-bin
@@ -53,7 +54,7 @@ flatpak -u override --env=XCURSOR_PATH=~/.icons
 flatpak -u override --env=XCURSOR_THEME=breeze
 flatpak -u override --env=XCURSOR_SIZE=24
 
-# set systemd
+#systemd
 sudo systemctl enable --now bluetooth sshd libvirtd.socket
 
 fastfetch
